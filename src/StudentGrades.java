@@ -1,7 +1,7 @@
 public class StudentGrades {
 
     //calculates the average of an array of integer scores.
-    public void calculateAverage(int[] scores){
+    public double calculateAverage(int[] scores){
 
         //validation
 
@@ -25,7 +25,14 @@ public class StudentGrades {
             }
         }
 
+        //calclation
 
+        double avg, sum=0;
+        for (int i = 0; i < scores.length; i++) {
+            sum += sum;
+        }
+        avg = sum/ scores.length;
+        return avg;
     }
 
 }
