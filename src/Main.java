@@ -35,6 +35,9 @@ public class Main {
         catch ( IllegalArgumentException e ) {
             System.out.println("ErrorMessage: " + e.getMessage());
         }
+        catch (FailedSignificantlyException e) {
+            System.out.println("ErrorMessage: " + e.getMessage());
+        }
         finally {
             scanner.close();
             System.out.println( "Grade calculation process concluded.");
