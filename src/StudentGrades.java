@@ -25,7 +25,7 @@ public class StudentGrades {
             }
         }
 
-        //calclation
+        //calculation
 
         double avg, sum=0;
         for (int i = 0; i < scores.length; i++) {
