@@ -17,11 +17,11 @@ public class StudentGrades {
         for (int i = 0; i < scores.length; i++) {
             //If any score in the array <0
             if (scores[i] < 0) {
-                throw new IllegalArgumentException("Some score in the array < 0.");
+                throw new IllegalArgumentException("Score cannot be less than 0.");
             }
             //If any score in the array >100
             if (scores[i] > 100) {
-                throw new IllegalArgumentException("Some score in the array > 100.");
+                throw new IllegalArgumentException("Score cannot be greater than 100.");
             }
         }
 

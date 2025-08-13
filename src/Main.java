@@ -12,10 +12,15 @@ public class Main {
 
         try {
             //input
-            System.out.println("Enter a series of scores (comma-separated):");
+            System.out.println("Enter scores (comma-separated): ");
             String score_String = scanner.nextLine();
 
             //process
+
+            //Scores array cannot be empty.
+            if (score_String.isBlank()){
+                throw new IllegalArgumentException("Scores array cannot be empty.");
+            }
 
             //split
             String[] score_Arr_String = score_String.split(",");
@@ -26,17 +31,16 @@ public class Main {
             }
 
             double studentGrade_Avg = studentGrades.calculateAverage(score_Arr_Int);
-            System.out.println(studentGrade_Avg);
+            System.out.println("Average score: " + studentGrade_Avg);
         }
         catch ( NumberFormatException e ) {
-            System.out.println("The user enters non-numeric input." +
-                    "\nErrorMessage: " + e.getMessage());
+            System.out.println("Invalid input: Please enter a valid number for scores. " + e.getMessage());
         }
         catch ( IllegalArgumentException e ) {
-            System.out.println("ErrorMessage: " + e.getMessage());
+            System.out.println("Error: " + e.getMessage());
         }
         catch (FailedSignificantlyException e) {
-            System.out.println("ErrorMessage: " + e.getMessage());
+            System.out.println("Significant Failure: " + e.getMessage());
         }
         finally {
             scanner.close();
