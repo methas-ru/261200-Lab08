@@ -17,11 +17,11 @@ public class StudentGrades {
         for (int i = 0; i < scores.length; i++) {
             //If any score in the array <0
             if (scores[i] < 0) {
-                throw new IllegalArgumentException("Some score in the array <0.");
+                throw new IllegalArgumentException("Some score in the array < 0.");
             }
-            //If any score in the array >10
-            if (scores[i] < 0) {
-                throw new IllegalArgumentException("Some score in the array >10.");
+            //If any score in the array >100
+            if (scores[i] > 100) {
+                throw new IllegalArgumentException("Some score in the array > 100.");
             }
         }
 
@@ -29,7 +29,7 @@ public class StudentGrades {
 
         double avg, sum=0;
         for (int i = 0; i < scores.length; i++) {
-            sum += sum;
+            sum += scores[i];
         }
         avg = sum/ scores.length;
         return avg;
