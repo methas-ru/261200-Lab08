@@ -32,6 +32,12 @@ public class StudentGrades {
             sum += scores[i];
         }
         avg = sum/ scores.length;
+
+        // if the average < 40
+        if (avg < 40) {
+            throw new FailedSignificantlyException("Student average is " + avg + ", which is a significant failure.");
+        }
+
         return avg;
     }
 
