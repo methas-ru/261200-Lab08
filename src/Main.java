@@ -11,7 +11,7 @@ public class Main {
         StudentGrades studentGrades = new StudentGrades();
 
         //input
-        System.out.println("Enter a series of scores (comma-separated)");
+        System.out.println("Enter a series of scores (comma-separated):");
         String score_String = scanner.nextLine();
 
         //process
@@ -24,10 +24,7 @@ public class Main {
             score_Arr_Int[i] = Integer.parseInt(score_Arr_String[i]);
         }
 
-        //test output
-
-        for (int i = 0; i < score_Arr_Int.length; i++) {
-            System.out.println(score_Arr_Int[i]);
-        }
+        double studentGrade_Avg = studentGrades.calculateAverage(score_Arr_Int);
+        System.out.println(studentGrade_Avg);
     }
 }
